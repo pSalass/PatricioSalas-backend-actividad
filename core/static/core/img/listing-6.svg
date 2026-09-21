@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" role="img" aria-label="Meadow house">
+  <defs><linearGradient id="l6s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4c99a"/><stop offset="1" stop-color="#8ba070"/></linearGradient></defs>
+  <rect width="1000" height="750" fill="url(#l6s)"/>
+  <path d="M 0 500 Q 500 480 1000 500 L 1000 750 L 0 750 Z" fill="#6b7c4f" opacity="0.6"/>
+  <rect x="280" y="400" width="440" height="180" fill="#faf5ea"/>
+  <polygon points="280,400 500,320 720,400" fill="#5a4028"/>
+  <g fill="#1a2139" opacity="0.5"><rect x="310" y="430" width="80" height="110"/><rect x="460" y="430" width="80" height="110"/><rect x="610" y="430" width="80" height="110"/></g>
+  <rect x="280" y="580" width="440" height="10" fill="#5a4028"/>
+</svg>

@@ -1,0 +1,86 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% static "core/css/styles.css" %}
+
+
+
+
+{% block content %} 
+
+<header class="site-header is-solid">
+    <a class="brand" href="/"><span class="brand-mark">M</span><span>Meridia<span class="brand-sub">Real Estate · Est. 1998</span></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/">Home</a><a href="/listings/">Listings</a><a href="/property/">Property</a>
+      <a href="/about/">About</a>
+      <a href="/contact/" class="active">Contact</a>
+    </nav>
+    <div class="header-cta"><a class="btn btn-ghost" href="#contact-form">Book a viewing</a></div>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+    <section class="page-title">
+      <p class="crumbs"><a href="/">Meridia</a> · Contact</p>
+      <h1>Reach an <span class="italic">advisor</span></h1>
+      <p>Four offices, one main line, and a form at the bottom if you prefer to write.</p>
+    </section>
+
+    <section class="section">
+      <div class="offices">
+        <div class="office">
+          <p class="city">San Francisco</p>
+          <h3>Pacific Heights</h3>
+          <p>2240 Union St, Suite 300<br>San Francisco, CA 94123<br><a href="tel:+14155550192">+1 (415) 555-0192</a></p>
+        </div>
+        <div class="office">
+          <p class="city">Marin</p>
+          <h3>Mill Valley</h3>
+          <p>85 Throckmorton Ave<br>Mill Valley, CA 94941<br><a href="tel:+14155550203">+1 (415) 555-0203</a></p>
+        </div>
+        <div class="office">
+          <p class="city">Napa</p>
+          <h3>St. Helena</h3>
+          <p>1412 Main St<br>St. Helena, CA 94574<br><a href="tel:+17075550317">+1 (707) 555-0317</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-wrap" id="contact-form">
+      <div>
+        <span class="eyebrow">Private inquiry</span>
+        <h2>Tell us what you're <span class="italic">considering</span>.</h2>
+        <p>We'll pair you with the advisor best suited to the region and type of home. Response within one business day — often within an hour.</p>
+        <p style="margin-top:32px;font-size:0.88rem;color:var(--ink-dim);">Prefer the phone?</p>
+        <p style="font-family:var(--serif);font-size:1.8rem;color:var(--ink);margin:0;">(415) 555-0192</p>
+        <p style="font-size:0.84rem;color:var(--ink-dim);margin-top:4px;">Weekdays 9am – 7pm · Saturdays 10am – 4pm · Pacific</p>
+      </div>
+
+      <form onsubmit="event.preventDefault();this.innerHTML='<div style=\'padding:48px 32px;background:var(--cream);border:1px solid var(--line-soft);text-align:center;\'><h3 style=\'color:var(--brass);margin-bottom:12px;\'>Your note is in</h3><p style=\'margin:0;\'>A Meridia advisor will be in touch within the business day.</p></div>'">
+        <div class="form-row">
+          <div class="form-field"><label for="c-name">Name</label><input type="text" id="c-name" required /></div>
+          <div class="form-field"><label for="c-phone">Phone</label><input type="tel" id="c-phone" /></div>
+        </div>
+        <div class="form-field"><label for="c-email">Email</label><input type="email" id="c-email" required /></div>
+        <div class="form-field">
+          <label for="c-interest">Interested in</label>
+          <select id="c-interest" required>
+            <option value="">Choose one</option>
+            <option>Buying — Marin / Peninsula</option>
+            <option>Buying — Napa / Sonoma</option>
+            <option>Buying — Carmel / Coast</option>
+            <option>Selling</option>
+            <option>Valuation / estate advice</option>
+            <option>Private event · press</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="c-region">Region</label>
+          <select id="c-region">
+            <option>Undecided</option><option>Marin County</option><option>Peninsula</option><option>Napa Valley</option><option>Sonoma</option><option>Carmel · Coast</option>
+          </select>
+        </div>
+        <div class="form-field"><label for="c-note">Notes (optional)</label><textarea id="c-note" placeholder="Timing, budget range, a property you're tracking — anything helpful."></textarea></div>
+        <button type="submit" class="btn btn-solid">Send the note</button>
+      </form>
+    </section>
+
+{% endblock %}

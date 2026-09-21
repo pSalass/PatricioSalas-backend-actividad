@@ -1,0 +1,97 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% static "core/css/styles.css" %}
+
+
+
+
+{% block content %} 
+
+<body>
+  <header class="site-header is-solid">
+    <a class="brand" href="/"><span class="brand-mark">M</span><span>Meridia<span class="brand-sub">Real Estate · Est. 1998</span></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/listings/" class="active">Listings</a>
+      <a href="/property/">Property</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="header-cta"><a class="btn btn-ghost" href="/contact/">Book a viewing</a></div>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="site-mobile-nav"><a href="/">Home</a><a href="/listings/">Listings</a><a href="/property/">Property</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+
+<main>
+    <section class="page-title">
+      <p class="crumbs"><a href="/">Meridia</a> · Listings</p>
+      <h1>Active <span class="italic">portfolio</span></h1>
+      <p>Forty-two homes currently represented by Meridia advisors. Refine below.</p>
+    </section>
+
+    <form class="filters-bar" onsubmit="event.preventDefault()">
+      <div class="form-field">
+        <label for="f-loc">Location</label>
+        <select id="f-loc">
+          <option>All regions</option><option>Marin County</option><option>Peninsula</option><option>Napa Valley</option><option>Sonoma</option><option>Carmel</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="f-type">Type</label>
+        <select id="f-type">
+          <option>All types</option><option>Single-family</option><option>Estate</option><option>Ranch</option><option>Pied-à-terre</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="f-min">Min price</label>
+        <select id="f-min">
+          <option>Any</option><option>$2M</option><option>$3M</option><option>$5M</option><option>$10M</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="f-beds">Bedrooms</label>
+        <select id="f-beds">
+          <option>Any</option><option>2+</option><option>3+</option><option>4+</option><option>5+</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="f-search">Keyword</label>
+        <input type="search" id="f-search" placeholder="View, pool, ranch …" />
+      </div>
+      <button type="submit" class="btn btn-solid">Apply</button>
+    </form>
+
+    <div class="listings-toolbar">
+      <p><strong>42 listings</strong> — showing 1 – 9</p>
+      <div>
+        Sort by
+        <select style="display:inline-block;width:auto;padding:8px 12px;margin-left:8px;">
+          <option>Newest</option><option>Price ↑</option><option>Price ↓</option><option>Size ↓</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="listings-grid">
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-1.svg' %}" alt="The Ridge House" loading="lazy" /><span class="listing-badge new">New</span></div><div class="listing-body"><p class="listing-loc">Mill Valley</p><h3>The Ridge House</h3><div class="listing-specs"><span>4 bed</span><span>3.5 bath</span><span>3,240 sqft</span></div><div class="listing-foot"><span class="listing-price">$4,250,000</span><a href="/property/">View →</a></div></div></article>
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-2.svg' %}" alt="The Cliffside Pavilion" loading="lazy" /><span class="listing-badge">For sale</span></div><div class="listing-body"><p class="listing-loc">Stinson Beach</p><h3>The Cliffside Pavilion</h3><div class="listing-specs"><span>5 bed</span><span>4.5 bath</span><span>4,800 sqft</span></div><div class="listing-foot"><span class="listing-price">$8,950,000</span><a href="/property/">View →</a></div></div></article>
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-3.svg' %}" alt="Oakfield Estate" loading="lazy" /><span class="listing-badge">Pending</span></div><div class="listing-body"><p class="listing-loc">St. Helena</p><h3>Oakfield Estate</h3><div class="listing-specs"><span>6 bed</span><span>6 bath</span><span>7,100 sqft</span></div><div class="listing-foot"><span class="listing-price">$14,500,000</span><a href="/property/">View →</a></div></div></article>
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-4.svg' %}" alt="The Orchard House" loading="lazy" /><span class="listing-badge">For sale</span></div><div class="listing-body"><p class="listing-loc">Ross</p><h3>The Orchard House</h3><div class="listing-specs"><span>4 bed</span><span>3 bath</span><span>2,900 sqft</span></div><div class="listing-foot"><span class="listing-price">$5,400,000</span><a href="/property/">View →</a></div></div></article>
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-5.svg' %}" alt="Loma Vista" loading="lazy" /><span class="listing-badge new">New</span></div><div class="listing-body"><p class="listing-loc">Los Altos Hills</p><h3>Loma Vista</h3><div class="listing-specs"><span>5 bed</span><span>5 bath</span><span>5,400 sqft</span></div><div class="listing-foot"><span class="listing-price">$9,200,000</span><a href="/property/">View →</a></div></div></article>
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-6.svg' %}" alt="Meadow House" loading="lazy" />< spanclass = " listing - badge " > For sale < / span ></ div >< divclass = " listing - body " >< pclass = " listing - loc " > Sonoma < / p >< h3 > Meadow House < / h3 >< divclass = " listing - specs " >< span > 3 bed < / span >< span > 2.5 bath < / span >< span > 2,400 sqft < / span ></ div >< divclass = " listing - foot " >< spanclass = " listing - price " > $3,100,000 < / span >< ahref = " property.html " > View → < / a ></ div ></ div ></ article >
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-1.svg' %}" alt="Cypress Point" loading="lazy" /><span class="listing-badge">For sale</span></div><div class="listing-body"><p class="listing-loc">Carmel</p><h3>Cypress Point Cottage</h3><div class="listing-specs"><span>3 bed</span><span>2 bath</span><span>2,100 sqft</span></div><div class="listing-foot"><span class="listing-price">$4,800,000</span><a href="/property/">View →</a></div></div></article>
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-2.svg' %}" alt="Bay Ridge" loading="lazy" /><span class="listing-badge">For sale</span></div><div class="listing-body"><p class="listing-loc">Tiburon</p><h3>Bay Ridge Residence</h3><div class="listing-specs"><span>4 bed</span><span>3.5 bath</span><span>3,800 sqft</span></div><div class="listing-foot"><span class="listing-price">$6,700,000</span><a href="/property/">View →</a></div></div></article>
+      <article class="listing"><div class="listing-img"><img src="{% static 'core/img/listing-3.svg' %}" alt="The Summit House" loading="lazy" /><span class="listing-badge new">New</span></div><div class="listing-body"><p class="listing-loc">Woodside</p><h3>The Summit House</h3><div class="listing-specs"><span>5 bed</span><span>4.5 bath</span><span>5,600 sqft</span></div><div class="listing-foot"><span class="listing-price">$12,500,000</span><a href="/property/">View →</a></div></div></article>
+    </div>
+
+</main>
+<div class="pager">
+  <a href="#" aria-label="Previous">←</a>
+  <span class="current">1</span>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#" aria-label="Next">→</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% static "core/css/styles.css" %}
+
+
+
+
+{% block content %} 
+
+<header class="site-header is-solid">
+    <a class="brand" href="/"><span class="brand-mark">M</span><span>Meridia<span class="brand-sub">Real Estate · Est. 1998</span></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/listings/">Listings</a>
+      <a href="/property/" class="active">Property</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="header-cta"><a class="btn btn-ghost" href="/contact/">Book a viewing</a></div>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+<section class="property-hero">
+      <p class="crumbs"><a href="/">Meridia</a> · <a href="/listings/">Listings</a> · Mill Valley</p>
+      <h1>The <span class="italic">Ridge</span> House</h1>
+      <p class="loc">1428 Throckmorton Ridge · Mill Valley · Marin County, CA</p>
+      <div class="price-row">
+        <span class="price">$4,250,000</span>
+        <div class="specs-pill">
+          <span>4 bedrooms</span>
+          <span>3.5 bathrooms</span>
+          <span>3,240 sq ft</span>
+          <span>0.52 acres</span>
+          <span>Built 1962, renovated 2023</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="property-gallery">
+      <div class="big"><!-- REPLACE: hero photo · 1600×1200 --><img src="{% static 'core/img/listing-1.svg' %}" alt="The Ridge House exterior at golden hour" /></div>
+      <img src="{% static 'core/img/listing-2.svg' %}" alt="Open living room" />
+      <img src="{% static 'core/img/listing-4.svg' %}" alt="Kitchen with walnut cabinetry" />
+      <img src="{% static 'core/img/listing-5.svg' %}" alt="Primary suite" />
+      <img src="{% static 'core/img/listing-6.svg' %}" alt="Back terrace overlooking valley" />
+    </div>
+
+    <section class="property-body">
+      <div class="property-overview">
+        <h2>Overview</h2>
+        <p>The Ridge House is a 1962 Joseph Esherick-era residence set into a private half-acre ridge in Mill Valley's Cascade Canyon. Originally commissioned by a professor of architecture, the home was quietly and respectfully renovated in 2023 by the original owner's granddaughter, an interior architect based in Los Angeles.</p>
+        <p>The main floor opens to a ninety-degree view of the Northern Marin watershed through twelve feet of continuous glass. A new walnut kitchen sits at the hinge between the formal and informal wings, and a separate studio — added in 2009 — works as a guest suite or detached office.</p>
+
+        <h3 style="margin-top:32px;margin-bottom:16px;">Features</h3>
+        <ul class="features-list">
+          <li>Original Esherick-era cedar cladding</li>
+          <li>12-foot wall of glass to the north</li>
+          <li>New walnut-and-marble kitchen (2023)</li>
+          <li>Radiant-heated concrete floors</li>
+          <li>Three zoned mini-split HVAC systems</li>
+          <li>240V EV charging in carport</li>
+          <li>Studio / guest suite with separate entry</li>
+          <li>Native plant garden by Rebecca Cole</li>
+          <li>Private well with 6,000-gal cistern</li>
+          <li>0.52 acres with deer fencing</li>
+          <li>Walking distance to Old Mill Park</li>
+          <li>Mill Valley School District</li>
+        </ul>
+
+        <h3 style="margin-top:32px;margin-bottom:16px;">About the ridge</h3>
+        <p>Throckmorton Ridge is one of four ridges defining the Cascade Canyon micro-neighborhood, known for quiet modernist homes and deep garden lots. Mill Valley's downtown, the ferry terminal, and Tam Junction are each a short drive; San Francisco is typically 25 minutes across the bridge.</p>
+      </div>
+
+      <aside class="agent-card">
+        <div class="agent-head">
+          <!-- REPLACE: advisor photo · 160×160 square -->
+          <img src="{% static 'core/img/team-1.svg' %}" alt="Advisor Claire Whitmore" />
+          <div>
+            <h3>Claire Whitmore</h3>
+            <span>Lead advisor · Marin</span>
+          </div>
+        </div>
+        <p style="font-size:0.92rem;margin-bottom:20px;">Claire has represented the owners of this home through two generations. Reach out for a private viewing or to discuss a fair offer.</p>
+        <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--brass);font-size:0.84rem;margin:0;\'>Your request has been sent. Claire will respond within the business day.</p>'">
+          <div class="form-field"><label for="p-name">Name</label><input type="text" id="p-name" required /></div>
+          <div class="form-field"><label for="p-email">Email</label><input type="email" id="p-email" required /></div>
+          <div class="form-field"><label for="p-phone">Phone</label><input type="tel" id="p-phone" /></div>
+          <div class="form-field"><label for="p-msg">Message</label><textarea id="p-msg" placeholder="Preferred viewing windows, or a question."></textarea></div>
+          <button type="submit" class="btn btn-brass">Request viewing</button>
+        </form>
+        <p style="font-size:0.74rem;color:var(--ink-dim);margin-top:16px;letter-spacing:0.14em;text-transform:uppercase;">CA DRE #02109487</p>
+      </aside>
+    </section>
+
+    <section class="closing">
+      <span class="eyebrow">Also on the ridge</span>
+      <h2>Three more homes you <span class="italic">might</span> see.</h2>
+      <p>Our advisors typically show three to four homes per private viewing appointment.</p>
+      <a class="btn btn-brass" href="/listings/">Return to portfolio</a>
+    </section>
+
+{% endblock %}

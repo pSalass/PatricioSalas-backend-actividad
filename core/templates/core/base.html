@@ -1,0 +1,73 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#1a2139" />
+  <title>Meridia — Luxury real estate advisors</title>
+  <meta name="description" content="Meridia is a luxury real estate website template. Five pages with cinematic hero, listings grid, single property page, team and contact. Navy and brass luxury aesthetic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="{% static 'core/css/styles.css' %}" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Meridia home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>Meridia<span class="brand-sub">Real Estate · Est. 1998</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/" class="active">Home</a>
+      <a href="/listings/">Listings</a>
+      <a href="/property/">Property</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="/contact/">Book a viewing</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="site-mobile-nav" aria-label="Mobile">
+    <a href="/">Home</a><a href="/listings/">Listings</a><a href="/property/">Property</a><a href="/about/">About</a><a href="/contact/">Contact</a>
+    <a class="btn btn-brass" href="/contact/">Book a viewing</a>
+  </nav>
+
+  {% block content %} {% endblock %}
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="/"><span class="brand-mark">M</span><span>Meridia<span class="brand-sub">Real Estate · Est. 1998</span></span></a>
+          <p class="footer-note">A private advisory for architecturally significant homes across Marin, the Peninsula, Napa, and Sonoma.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Firm</p>
+          <ul><li><a href="/about/">About</a></li><li><a href="#">Advisors</a></li><li><a href="#">Press</a></li><li><a href="#">Careers</a></li></ul>
+        </div>
+        <div>
+          <p class="footer-heading">Portfolio</p>
+          <ul><li><a href="/listings/">Active listings</a></li><li><a href="#">Archive</a></li><li><a href="#">Off-market</a></li><li><a href="#">Commercial</a></li></ul>
+        </div>
+        <div>
+          <p class="footer-heading">Join the quarterly brief</p>
+          <p style="font-size:0.9rem;color:color-mix(in oklab, var(--cream) 65%, transparent);margin-bottom:16px;">Four emails a year. Market notes, off-market previews, nothing else.</p>
+          <form class="newsletter-mini" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--brass);font-size:0.84rem;margin:0;letter-spacing:0.16em;text-transform:uppercase;\'>Thank you.</p>'">
+            <input type="email" placeholder="name@example.com" aria-label="Email" required />
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="y"></span> Meridia Real Estate. DRE #01234567.</p>
+        <p>San Francisco · Mill Valley · St. Helena · Carmel</p>
+      </div>
+    </div>
+  </footer>
+  <script src="{% static 'core/js/main.js' %}" defer></script>
+</body>
+</html>

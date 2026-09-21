@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-label="Advisor portrait">
+  <defs><linearGradient id="t3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d4358"/><stop offset="1" stop-color="#1a2139"/></linearGradient></defs>
+  <rect width="600" height="800" fill="url(#t3)"/>
+  <ellipse cx="300" cy="780" rx="240" ry="280" fill="#b59553" opacity="0.4"/>
+  <circle cx="300" cy="360" r="140" fill="#c68f6a"/>
+  <path d="M 140 380 Q 300 200 460 380 L 500 320 Q 300 130 100 320 Z" fill="#1a0f08"/>
+  <rect x="100" y="520" width="400" height="280" fill="#1a2139"/>
+  <text x="300" y="760" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-size="26" fill="#fef6e1" text-anchor="middle" opacity="0.8">Ivelisse P.</text>
+</svg>

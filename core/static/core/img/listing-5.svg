@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" role="img" aria-label="Loma Vista hillside home">
+  <defs><linearGradient id="l5s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f3ee"/><stop offset="0.7" stop-color="#d9d3c3"/><stop offset="1" stop-color="#9e8f6b"/></linearGradient></defs>
+  <rect width="1000" height="750" fill="url(#l5s)"/>
+  <path d="M 0 480 L 300 440 L 500 460 L 700 420 L 1000 450 L 1000 750 L 0 750 Z" fill="#6b7c4f" opacity="0.5"/>
+  <rect x="100" y="370" width="800" height="220" fill="#1a2139"/>
+  <rect x="130" y="390" width="740" height="180" fill="#2a2e3f"/>
+  <g fill="#b59553" opacity="0.8"><rect x="170" y="410" width="200" height="140"/><rect x="400" y="410" width="200" height="140"/><rect x="630" y="410" width="200" height="140"/></g>
+</svg>

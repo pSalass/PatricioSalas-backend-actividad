@@ -1,0 +1,153 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% static "core/css/styles.css" %}
+
+
+
+
+{% block content %} 
+
+    <section class="cinema-hero" aria-label="Welcome to Meridia">
+      <div class="bg" aria-hidden="true">
+        <!-- REPLACE: full-bleed hero photo · 2400×1600 · WebP/JPG · architectural exterior at dusk -->
+        <img src="{% static 'core/img/hero.svg' %}" alt="" />
+      </div>
+      <div class="cinema-inner">
+        <div>
+          <p class="cinema-label">Spring portfolio · 2026</p>
+          <h1 class="cinema-title">Homes for the <span class="italic">long</span> view.</h1>
+          <p class="cinema-sub">A private advisory for buyers, sellers, and owners of architecturally significant homes in Marin, the Peninsula, and Napa Valley.</p>
+          <div class="cinema-actions">
+            <a class="btn btn-brass" href="/listings/">View listings</a>
+            <a class="btn btn-ghost" href="/contact/">Speak to an advisor</a>
+          </div>
+        </div>
+        <aside class="cinema-meta">
+          <div class="cinema-meta-row"><small>Listings</small><strong>42 active</strong></div>
+          <div class="cinema-meta-row"><small>Portfolio</small><strong>$1.2B sold</strong></div>
+          <div class="cinema-meta-row"><small>Advisors</small><strong>28 partners</strong></div>
+        </aside>
+      </div>
+      <p class="scroll-hint">Scroll</p>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <span class="eyebrow">Recently added</span>
+        <h2>Homes currently on the <span class="italic">portfolio</span></h2>
+        <p class="section-lede">A small selection of what our advisors are showing this week. The full portfolio updates daily.</p>
+      </header>
+      <div class="listings-strip">
+        <article class="listing">
+          <div class="listing-img">
+            <!-- REPLACE: listing photo · 1000×750 -->
+            <img src="{% static 'core/img/listing-1.svg' %}" alt="Mid-century home with cedar cladding and low ridge line" loading="lazy" />
+            <span class="listing-badge new">New</span>
+          </div>
+          <div class="listing-body">
+            <p class="listing-loc">Mill Valley · Marin County</p>
+            <h3>The Ridge House</h3>
+            <div class="listing-specs">
+              <span>4 bed</span><span>3.5 bath</span><span>3,240 sqft</span><span>0.5 ac</span>
+            </div>
+            <div class="listing-foot">
+              <span class="listing-price">$4,250,000</span>
+              <a href="/property/">View →</a>
+            </div>
+          </div>
+        </article>
+        <article class="listing">
+          <div class="listing-img">
+            <!-- REPLACE: listing photo · 1000×750 -->
+            <img src="{% static 'core/img/listing-2.svg' %}" alt="Contemporary glass-walled residence overlooking ocean" loading="lazy" />
+            <span class="listing-badge">For sale</span>
+          </div>
+          <div class="listing-body">
+            <p class="listing-loc">Stinson Beach · Coastal</p>
+            <h3>The Cliffside Pavilion</h3>
+            <div class="listing-specs">
+              <span>5 bed</span><span>4.5 bath</span><span>4,800 sqft</span><span>1.2 ac</span>
+            </div>
+            <div class="listing-foot">
+              <span class="listing-price">$8,950,000</span>
+              <a href="/property/">View →</a>
+            </div>
+          </div>
+        </article>
+        <article class="listing">
+          <div class="listing-img">
+            <!-- REPLACE: listing photo · 1000×750 -->
+            <img src="{% static 'core/img/listing-3.svg' %}" alt="Stone-and-timber estate in Napa Valley at golden hour" loading="lazy" />
+            <span class="listing-badge">Pending</span>
+          </div>
+          <div class="listing-body">
+            <p class="listing-loc">St. Helena · Napa Valley</p>
+            <h3>Oakfield Estate</h3>
+            <div class="listing-specs">
+              <span>6 bed</span><span>6 bath</span><span>7,100 sqft</span><span>12 ac</span>
+            </div>
+            <div class="listing-foot">
+              <span class="listing-price">$14,500,000</span>
+              <a href="/property/">View →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:48px;">
+        <a class="btn btn-link" href="/listings/">See all 42 active listings</a>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Meridia in numbers">
+      <div class="stat">
+        <strong>28</strong>
+        <small>Years advising</small>
+        <p>Since 1998, quietly building a client list that returns across three generations.</p>
+      </div>
+      <div class="stat">
+        <strong>$1.2B</strong>
+        <small>Portfolio sold</small>
+        <p>Across single-family, ranch, and trust-held estate transactions in California.</p>
+      </div>
+      <div class="stat">
+        <strong>28d</strong>
+        <small>Avg. days on market</small>
+        <p>From listing to accepted offer, for properties above $3M in our advisory.</p>
+      </div>
+      <div class="stat">
+        <strong>96%</strong>
+        <small>Ask to sold</small>
+        <p>Sellers close at or above list in nine of ten Meridia-advised transactions.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="two-col">
+        <!-- REPLACE: editorial photo · 900×1125 · architecture or advisor at work -->
+        <img src="{% static 'core/img/about.svg' %}" alt="Advisor reviewing blueprints at a walnut table" />
+        <div class="content">
+          <span class="eyebrow">Our practice</span>
+          <h2>Private advisory. <span class="italic">Not</span> a storefront.</h2>
+          <p>Meridia was founded in 1998 to do a quieter job than the signs-on-lawns business — advise a small number of families and estates on the homes they'll hold for decades. We don't mass-market, we don't bid wars, and we don't work on volume.</p>
+          <p>Our twenty-eight partners are licensed in California and hold additional specializations in trust, historic, and agricultural-parcel transactions. Every client is paired with a single lead advisor who stays with the relationship for the life of the asset.</p>
+          <a class="btn-link" href="/about/">About the firm →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="advisor">
+      <blockquote>
+        <q>Meridia sold the ranch in nineteen days after it had sat with two other firms for nearly a year. The difference wasn't marketing — it was that they understood who the buyer would actually be.</q>
+        <cite><strong>Karim &amp; Louise D.</strong> · Napa Valley · 2025 sale</cite>
+      </blockquote>
+    </section>
+
+    <section class="closing">
+      <span class="eyebrow">Private inquiry</span>
+      <h2>Begin with a <span class="italic">conversation</span>.</h2>
+      <p>Every Meridia relationship starts with an hour-long private call — no pitch, no commitment. We'll tell you what we think, in plain English, about whatever you're considering.</p>
+      <a class="btn btn-brass" href="/contact/">Request the call</a>
+    </section>
+  
+
+{% endblock %}

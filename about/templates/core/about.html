@@ -1,0 +1,78 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% static "core/css/styles.css" %}
+
+
+
+
+{% block content %} 
+
+<header class="site-header is-solid">
+    <a class="brand" href="/"><span class="brand-mark">M</span><span>Meridia<span class="brand-sub">Real Estate · Est. 1998</span></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/">Home</a><a href="/listings/">Listings</a><a href="/property/">Property</a>
+      <a href="/about/" class="active">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="header-cta"><a class="btn btn-ghost" href="/contact/">Book a viewing</a></div>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+<main>
+    <section class="page-title">
+      <p class="crumbs"><a href="/">Meridia</a> · About</p>
+      <h1>The <span class="italic">firm</span></h1>
+      <p>Founded 1998. Twenty-eight partners. One way of working.</p>
+    </section>
+
+    <section class="about-story">
+      <p>Meridia was founded by Helena Marchetti and Rafael Osuna in 1998 as an alternative to the signs-on-lawns real estate business. The idea was simple: advise a small number of families and estates on the homes they would hold for decades, and do it slowly, privately, and well.</p>
+      <p>Twenty-eight years later, we hold to the same practice. <span class="italic">Quiet, careful, relational.</span> We don't mass-market. We don't stage war rooms. We don't run open houses on Sundays unless a seller specifically wants us to. Every client is paired with one lead advisor who stays with the relationship for the life of the asset — often across sales of two, three, or four homes over decades.</p>
+      <p>Our partners are licensed in California and hold additional specializations in trust, historic, and agricultural-parcel transactions. We publish a quarterly brief with market notes and off-market previews — four emails a year, nothing else.</p>
+    </section>
+
+    <section class="section">
+      <header class="section-head">
+        <span class="eyebrow">Our partners</span>
+        <h2>The people who will <span class="italic">answer</span> your call.</h2>
+      </header>
+      <div class="team-grid">
+        <div class="team-member">
+          <!-- REPLACE: advisor photo · 600×800 -->
+          <img src="{% static 'core/img/team-1.svg' %}" alt="Claire Whitmore" />
+          <h3>Claire Whitmore</h3>
+          <span>Marin County</span>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'core/img/team-2.svg' %}" alt="Marcus Ellsworth" />
+          <h3>Marcus Ellsworth</h3>
+          <span>Peninsula</span>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'core/img/team-3.svg' %}" alt="Ivelisse Peña" />
+          <h3>Ivelisse Peña</h3>
+          <span>Napa · Sonoma</span>
+        </div>
+        <div class="team-member">
+          <img src="{% static 'core/img/team-4.svg' %}" alt="Jun Takashi" />
+          <h3>Jun Takashi</h3>
+          <span>Carmel · Coast</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="advisor">
+      <blockquote>
+        <q>The very best thing about working with Meridia is that you will never, ever feel like a transaction. They call every September — whether you're buying, selling, or doing neither.</q>
+        <cite><strong>Annette &amp; Victor L.</strong> · Client since 2003</cite>
+      </blockquote>
+    </section>
+
+    <section class="closing">
+      <span class="eyebrow">Work with us</span>
+      <h2>Begin with a <span class="italic">conversation</span>.</h2>
+      <p>An hour on the phone with a lead advisor, no pitch, no commitment.</p>
+      <a class="btn btn-brass" href="/contact/">Schedule a call</a>
+    </section>
+
+{% endblock %}
